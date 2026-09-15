@@ -1,5 +1,5 @@
 /* =========================================================
-   Kit Completo de Inglês Visual — Landing Page Stylesheet
+   Pack Trinca-Ferro Digital — Landing Page Stylesheet
    ========================================================= */
 
 :root {
@@ -8,16 +8,16 @@
 
   --bg-primary: #ffffff;
   --bg-secondary: #f6f8fc;
-  --bg-dark: #0b1b34;
-  --text-dark: #0b1b34;
+  --bg-dark: #102a1f;
+  --text-dark: #163526;
   --text-muted: #475467;
   --text-light: #8a94a6;
   --border-light: #e6e9f0;
 
-  --brand: #ffc531;
-  --brand-dark: #8a5a00;
-  --accent: #ffb020;
-  --success-color: #0b1b34;
+  --brand: #66b82e;
+  --brand-dark: #123c24;
+  --accent: #4a9f2d;
+  --success-color: #287a3d;
 
   --radius: 16px;
   --shadow-sm: 0 2px 8px rgba(16, 24, 40, 0.06);
@@ -56,8 +56,8 @@ h1, h2, h3, h4 {
 
 /* ---------- Promo banner ---------- */
 .promo-banner {
-  background: linear-gradient(90deg, #ffd34d, #ffb800);
-  color: #0b1b34;
+  background: linear-gradient(90deg, #8bd448, #43a63c);
+  color: #163526;
   text-align: center;
   font-size: 13px;
   font-weight: 600;
@@ -77,8 +77,8 @@ h1, h2, h3, h4 {
   margin: 0 auto 14px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: #fff3cd;
-  color: #8a5a00;
+  background: #e8f7dc;
+  color: #245b31;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -107,7 +107,7 @@ h1, h2, h3, h4 {
   padding: 48px 0 64px;
   text-align: center;
   background:
-    radial-gradient(900px 460px at 50% -10%, #fff6db 0%, transparent 72%),
+    radial-gradient(900px 460px at 50% -10%, #effbe7 0%, transparent 72%),
     var(--bg-primary);
 }
 
@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
   margin: 0 auto 16px;
 }
 .hl {
-  background: linear-gradient(180deg, transparent 58%, #ffd34d 58%);
+  background: linear-gradient(180deg, transparent 58%, #7ac943 58%);
   padding: 0 4px;
 }
 
@@ -184,13 +184,13 @@ h1, h2, h3, h4 {
   display: inline-block;
   padding: 18px 38px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #ffd24a, #ffb800);
-  color: #0b1b34;
+  background: linear-gradient(180deg, #83d64a, #3f9f3a);
+  color: #163526;
   font-family: var(--font-title);
   font-size: 1.05rem;
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 14px 30px rgba(255, 184, 0, 0.38);
+  box-shadow: 0 14px 30px rgba(63, 159, 58, 0.34);
   transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 .btn-cta:hover { transform: translateY(-2px); filter: brightness(1.04); }
@@ -287,8 +287,8 @@ h1, h2, h3, h4 {
 }
 .curriculum-tab-btn:hover { border-color: #c9d0dd; transform: translateY(-1px); }
 .curriculum-tab-btn.active {
-  border-color: #ffb800;
-  box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.28);
+  border-color: #43a63c;
+  box-shadow: 0 0 0 3px rgba(67, 166, 60, 0.24);
 }
 .tab-level {
   font-family: var(--font-title);
@@ -299,7 +299,7 @@ h1, h2, h3, h4 {
   border-radius: 9px;
   padding: 7px 9px;
 }
-.curriculum-tab-btn.active .tab-level { background: #ffb800; color: #0b1b34; }
+.curriculum-tab-btn.active .tab-level { background: #43a63c; color: #163526; }
 .tab-info { display: flex; flex-direction: column; }
 .tab-title { font-weight: 800; color: var(--text-dark); font-size: 0.9rem; }
 .tab-count { font-size: 0.75rem; color: var(--text-light); font-weight: 600; }
@@ -405,7 +405,7 @@ h1, h2, h3, h4 {
 .bonus-badge {
   display: inline-block;
   background: var(--brand);
-  color: #0b1b34;
+  color: #163526;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -638,8 +638,8 @@ h1, h2, h3, h4 {
   border: 2px solid var(--brand);
   border-radius: 24px;
   background:
-    linear-gradient(180deg, #fffdf4 0%, var(--bg-primary) 45%);
-  box-shadow: 0 0 0 6px rgba(255, 197, 49, 0.14), 0 28px 60px rgba(11, 27, 52, 0.14);
+    linear-gradient(180deg, #f7fcf4 0%, var(--bg-primary) 45%);
+  box-shadow: 0 0 0 6px rgba(102, 184, 46, 0.15), 0 28px 60px rgba(11, 27, 52, 0.14);
   overflow: visible;
 }
 
@@ -657,7 +657,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.4px;
   padding: 9px 18px;
   border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(255, 176, 32, 0.4);
+  box-shadow: 0 8px 20px rgba(63, 159, 58, 0.32);
 }
 
 .offer-discount-pill {
@@ -673,7 +673,7 @@ h1, h2, h3, h4 {
 }
 
 .offer-price {
-  background: linear-gradient(90deg, var(--text-dark), #1b3c6d);
+  background: linear-gradient(90deg, var(--text-dark), #2c6d42);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -685,8 +685,8 @@ h1, h2, h3, h4 {
 }
 
 @keyframes offer-pulse {
-  0%, 100% { box-shadow: 0 10px 24px rgba(255, 176, 32, 0.35); }
-  50% { box-shadow: 0 14px 34px rgba(255, 176, 32, 0.6); }
+  0%, 100% { box-shadow: 0 10px 24px rgba(63, 159, 58, 0.30); }
+  50% { box-shadow: 0 14px 34px rgba(63, 159, 58, 0.52); }
 }
 
 @media (prefers-reduced-motion: reduce) {

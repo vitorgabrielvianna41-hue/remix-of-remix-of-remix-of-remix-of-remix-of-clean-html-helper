@@ -349,7 +349,7 @@ export function CoverflowCarousel({
               type="button"
               aria-label="Anterior"
               onClick={() => nudge(-1)}
-              className="absolute left-3 top-1/2 z-[200] -translate-y-1/2 rounded-full bg-white/80 p-2 text-slate-900 backdrop-blur transition hover:bg-white"
+              className="absolute left-3 top-1/2 z-[200] -translate-y-1/2 rounded-full bg-background/80 p-2 text-foreground backdrop-blur transition hover:bg-background"
             >
               <ChevronLeft className="size-5" />
             </button>
@@ -357,7 +357,7 @@ export function CoverflowCarousel({
               type="button"
               aria-label="Próximo"
               onClick={() => nudge(1)}
-              className="absolute right-3 top-1/2 z-[200] -translate-y-1/2 rounded-full bg-white/80 p-2 text-slate-900 backdrop-blur transition hover:bg-white"
+              className="absolute right-3 top-1/2 z-[200] -translate-y-1/2 rounded-full bg-background/80 p-2 text-foreground backdrop-blur transition hover:bg-background"
             >
               <ChevronRight className="size-5" />
             </button>
@@ -407,7 +407,7 @@ export function CoverflowCarousel({
           aria-modal="true"
           aria-label={zoomed.alt}
           onClick={() => setZoomed(null)}
-          className="fixed inset-0 z-[300] flex items-center justify-center bg-black/85 p-4"
+          className="fixed inset-0 z-[300] flex items-center justify-center bg-foreground/85 p-4"
         >
           <button
             type="button"
@@ -416,7 +416,7 @@ export function CoverflowCarousel({
               event.stopPropagation();
               setZoomed(null);
             }}
-            className="absolute right-4 top-4 rounded-full bg-white/90 p-2 text-slate-900 transition hover:bg-white"
+            className="absolute right-4 top-4 rounded-full bg-background/90 p-2 text-foreground transition hover:bg-background"
           >
             <X className="size-5" />
           </button>
@@ -424,7 +424,7 @@ export function CoverflowCarousel({
             src={zoomed.src}
             alt={zoomed.alt}
             onClick={(event) => event.stopPropagation()}
-            className="max-h-[92vh] w-auto max-w-[95vw] rounded-xl bg-white object-contain shadow-2xl"
+            className="max-h-[92vh] w-auto max-w-[95vw] rounded-xl bg-card object-contain shadow-2xl"
           />
         </div>
       )}

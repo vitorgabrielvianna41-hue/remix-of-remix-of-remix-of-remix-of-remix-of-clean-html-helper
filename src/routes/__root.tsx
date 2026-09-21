@@ -11,7 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { pixelScript, utmScript } from "../lib/tracking-scripts";
 
 function NotFoundComponent() {
   return (
@@ -106,8 +105,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
-        <script dangerouslySetInnerHTML={{ __html: pixelScript }} />
-        <script dangerouslySetInnerHTML={{ __html: utmScript }} />
       </head>
       <body>
         {children}

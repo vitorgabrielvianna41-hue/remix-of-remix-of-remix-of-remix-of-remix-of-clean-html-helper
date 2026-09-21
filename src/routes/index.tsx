@@ -5,21 +5,21 @@ import landingHtml from "../../public/mapa.html?raw";
 import { CoverflowCarousel } from "@/components/ui/coverflow-carousel";
 
 const siteImage = (name: string) => `/site-images/${name}`;
-const kitMockup = siteImage("plano-premium.png");
-const mapa1 = siteImage("preview-gestante-01.png");
-const mapa2 = siteImage("preview-gestante-02.png");
-const mapa3 = siteImage("preview-gestante-03.png");
-const mapa4 = siteImage("preview-gestante-04.png");
-const mapa5 = siteImage("preview-gestante-05.png");
-const depoimento1 = siteImage("depoimento-conversa-01.png");
-const depoimento2 = siteImage("depoimento-conversa-02.png");
-const depoimento3 = siteImage("depoimento-conversa-03.png");
-const depoimento4 = siteImage("depoimento-conversa-04.png");
-const bonus1 = siteImage("bonus-alongamentos.png");
-const bonus2 = siteImage("bonus-rotina-semanal.png");
-const bonus3 = siteImage("bonus-planner-gestante.png");
-const bonus4 = siteImage("bonus-terceiro-trimestre.png");
-const bonus5 = siteImage("bonus-fichas-acompanhamento.png");
+const kitMockup = siteImage("plano-premium.webp");
+const mapa1 = siteImage("preview-gestante-01.webp");
+const mapa2 = siteImage("preview-gestante-02.webp");
+const mapa3 = siteImage("preview-gestante-03.webp");
+const mapa4 = siteImage("preview-gestante-04.webp");
+const mapa5 = siteImage("preview-gestante-05.webp");
+const depoimento1 = siteImage("depoimento-conversa-01.webp");
+const depoimento2 = siteImage("depoimento-conversa-02.webp");
+const depoimento3 = siteImage("depoimento-conversa-03.webp");
+const depoimento4 = siteImage("depoimento-conversa-04.webp");
+const bonus1 = siteImage("bonus-alongamentos.webp");
+const bonus2 = siteImage("bonus-rotina-semanal.webp");
+const bonus3 = siteImage("bonus-planner-gestante.webp");
+const bonus4 = siteImage("bonus-terceiro-trimestre.webp");
+const bonus5 = siteImage("bonus-fichas-acompanhamento.webp");
 
 const mapas = [mapa1, mapa2, mapa3, mapa4, mapa5];
 const bonusImgs = [bonus1, bonus2, bonus3, bonus4, bonus5];
@@ -76,7 +76,7 @@ const afterHtml = rewriteAssets(rawBody.slice(splitIndex + (match?.[0].length ??
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "150 Exercícios Adaptados para Gestantes | Gestação em Movimento" },
+      { title: "150 Exercícios Adaptados para Gestantes Fazerem em Casa" },
       {
         name: "description",
         content:
@@ -112,19 +112,34 @@ function useLandingScript() {
     if (!root) return;
     let cleanup: (() => void) | undefined;
 
-    // Wistia VSL player (custom element <wistia-player> in the hero)
-    if (!document.querySelector('script[src*="wistia.com/player.js"]')) {
-      const playerScript = document.createElement("script");
-      playerScript.src = "https://fast.wistia.com/player.js";
-      playerScript.async = true;
-      document.head.appendChild(playerScript);
-    }
-    if (!document.querySelector('script[src*="wistia.com/embed/1pnbax76zm.js"]')) {
-      const embedScript = document.createElement("script");
-      embedScript.src = "https://fast.wistia.com/embed/1pnbax76zm.js";
-      embedScript.type = "module";
-      embedScript.async = true;
-      document.head.appendChild(embedScript);
+    const video = root.querySelector("wistia-player");
+    const loadVideo = () => {
+      if (!document.querySelector('script[src*="wistia.com/player.js"]')) {
+        const playerScript = document.createElement("script");
+        playerScript.src = "https://fast.wistia.com/player.js";
+        playerScript.async = true;
+        document.head.appendChild(playerScript);
+      }
+      if (!document.querySelector('script[src*="wistia.com/embed/1pnbax76zm.js"]')) {
+        const embedScript = document.createElement("script");
+        embedScript.src = "https://fast.wistia.com/embed/1pnbax76zm.js";
+        embedScript.type = "module";
+        embedScript.async = true;
+        document.head.appendChild(embedScript);
+      }
+    };
+    if (video && "IntersectionObserver" in window) {
+      const videoObserver = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          loadVideo();
+          videoObserver.disconnect();
+        },
+        { rootMargin: "160px" },
+      );
+      videoObserver.observe(video);
+    } else {
+      loadVideo();
     }
 
     const trackingWindow = window as unknown as { pixelId?: string };

@@ -45,7 +45,7 @@ function rewriteAssets(html: string) {
     .replace(/\/assets\/plano-premium-upload\.png/g, siteImage("plano-premium.png"))
     .replace(/\/assets\/mapa_preview_(\d)\.webp/g, (_m, n) => mapas[(Number(n) - 1) % mapas.length] ?? mapa1)
     .replace(/\/assets\/bonus_(\d)\.webp/g, (_m, n) => bonusImgs[(Number(n) - 1) % bonusImgs.length] ?? bonus1)
-    .replace(/\/assets\/dra_camila_rodrigues\.webp/g, siteImage("dra-camila-rodrigues.png"))
+    .replace(/\/assets\/dra_camila_rodrigues\.webp/g, siteImage("dra-camila-rodrigues.webp"))
     .replace(
       /\/assets\/depoimento_(\w+)_produto\.webp/g,
       (_m, name: string) => depoimentos[name]?.produto ?? depoimento1,

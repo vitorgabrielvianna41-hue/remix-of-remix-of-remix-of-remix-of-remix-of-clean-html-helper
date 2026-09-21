@@ -56,8 +56,8 @@
     var timers = [];
     if (toast) {
       var names = [
-        "Mariana S.", "Camila R.", "Lucas F.", "Patrícia M.", "Fernanda R.",
-        "Rafael A.", "Juliana P.", "Bruno T.", "Aline C.", "Thiago M."
+        "Mariana S.", "Carolina R.", "Juliana L.", "Fernanda M.", "Camila A.",
+        "Patrícia C.", "Amanda P.", "Larissa T.", "Bianca C.", "Renata M."
       ];
       var times = ["há poucos segundos", "há 1 minuto", "há 3 minutos", "há 6 minutos"];
       var nameEl = root.querySelector("#toast-name");
